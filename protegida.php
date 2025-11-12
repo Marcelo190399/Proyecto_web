@@ -1,0 +1,58 @@
+<?php
+session_start();
+
+if (!isset($_SESSION['usuario_id'])) {
+    header("Location: login.php");
+    exit();
+}
+?>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pagina de inicio</title>
+    <link rel="stylesheet"  href="inicio.css">
+</head>
+<body>
+    <header>
+        <div class="indice">
+            <nav>
+                <ul class="barra">
+                    <li><a href="protegida.php">Principal</a></li>
+                    <li><a href="imagenes.html">Imágenes</a></li>
+                    <li><a href="#">Códigos</a></li>
+                    <details>
+                        <summary><img src="imagen/perfil.jpg" alt="foto" width="50px" height="50px"></summary>
+                            <a href="logout.php" class="despliegue">Cerrar sesión</a>
+                    </details>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section class="contenido">
+            <h2>Bienvenid@, <?php echo $_SESSION['usuario_nombre']; ?></h2>
+            <h2>Hola este es un espacio de prueba, por el momento no hay nada mas, pero si deseas haz click en la foto del perfil para cerrar sesión.</h2>
+    </section>
+    
+    <footer>
+        <aside class="espacio">
+            <h3>Contáctame</h3>
+            <a href="mailto:luis.guanca.90@gmail.com" target="_blank">
+                <img src="iconos/gmail.png" alt="correo electronico" width="30" class="email">
+            </a>
+            <a href="https://www.facebook.com/axo.3950/" target="_blank">
+                <img src="iconos/facebook.png" alt="facebook" width="30"  class="facebook">
+            </a>
+            <a href="https://www.instagram.com/ghast580/" target="_blank">
+                <img src="iconos/insta.png" alt="instagram" width="30" class="insta">
+            </a>
+            <a href="https://wa.link/7qx1re" target="_blank">
+                <img src="iconos/what.png" alt="whatssapp" width="30" class="what">
+            </a>
+
+            <h4>@ derechos reservados 2025</h4>
+        </aside>
+    </footer>
+</body>
+</html>

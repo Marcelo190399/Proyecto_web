@@ -1,0 +1,156 @@
+html {
+    font-size: 16px;
+}
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #161616;
+
+}
+
+.contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login {
+    max-width: 320px;
+    width: 100%;
+    padding: 40px;
+    background: #ffffffe6;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px #0000001a;
+    animation: fadeIn 1.5s ease-out;
+}
+
+.inicio {
+    text-align: center;
+    color: #333;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.mensaje {
+    background-color: #f5f5f5;
+    text-align: center;
+    color: #e32323;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+}
+
+.verificacion {
+    position: absolute;
+    color: #161616;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-group .label {
+    position: absolute;
+    top: -1rem;
+    left: 12px;
+    font-size: 12px;
+    color: #309a40;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    opacity: 0.7;
+}
+
+.input-group input {
+    width: 275px;
+    padding: 15px 20px;
+    font-size: 1rem;
+    color: #333;
+    background-color: #f5f5f5;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.input-group input:focus {
+    border-color: #309a40;
+    box-shadow: 0 0 10px #58bc8266;
+}
+
+.input-group input:focus + .label {
+    top: -20px;
+    font-size: 11px;
+    color: #309a40;
+    opacity: 1;
+}
+
+.pass {
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+.pass a {
+    font-size: 14px;
+    color: #58bc82;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.pass a:hover {
+    color: #45a56b;
+}
+
+.submit {
+    width: 100%;
+    padding: 15px;
+    background-color: #58bc82;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.submit:hover {
+    background-color: #45a56b;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px #58bc824d;
+}
+
+.signun-link {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 14px;
+    color: #333;
+}
+
+.signun-link a {
+    color: #58bc82;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.signun-link a:hover {
+    color: #45a56b;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}

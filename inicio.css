@@ -1,0 +1,216 @@
+html{
+    font-size: 16px;
+}
+
+body {
+  background-color: #f5f5f5;
+  border: none;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.indice {
+    padding: 0.6rem 0;
+    margin: 0.6rem;
+    color: #fff;
+    background-color: black;
+    border-radius: 1.8rem;
+    position: relative;
+
+}
+
+nav .barra {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    margin: auto;
+    width: 95%;
+}
+
+li {
+    cursor: pointer;
+    font-weight: bold;
+}
+
+nav .barra li {
+    display: inline-block;
+    margin: 0 1rem;
+
+}
+
+img {
+    border-radius: 50%50%50%0;
+}
+
+details {
+    position: relative;
+}
+
+summary{
+    list-style: none;
+    cursor: pointer;
+}
+
+details[open] a.despliegue {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 60px;
+    background-color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ffffff;
+    font-size: 13px;
+    padding: 8px;
+    margin: 5px;
+    border-radius: 5px;
+    white-space: nowrap;
+    box-shadow: o 2px 6px rgba(0, 0, 0, 0.3);
+    z-index: 10;
+}
+
+a {
+    position: relative;
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #fff;
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+    padding: 0 0.6rem;
+}
+
+section {
+    border-radius: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    min-height: 80vh;
+}
+
+main {
+    flex: 1;
+}
+
+.contenido {
+    background: #f5f5f5;
+    padding: 1.2rem 0.65rem;
+    margin: 1.1rem 0.60rem;
+    border: 0.5rem inset #45a56b;
+    border-radius: 1.2rem;
+    text-align: start;
+    flex: 1;
+}
+
+h2 {
+    text-align: start;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #000000;
+}
+
+h3 h4 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #000000;
+    text-align: center;
+}
+
+.div {
+    width: 24rem;
+    height: 28rem;
+    opacity: 1;
+    box-shadow: 1.3rem 1.3rem 0.65rem rgb(30, 56, 25);
+    animation: slider 20s linear infinite;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 3rem;
+    flex: 1;
+}
+
+footer {
+    padding-top: 2rem;
+    background: #f5f5f5;
+    text-align: center;
+    color: #e2dfdf;
+    margin-top: auto;
+    border-top: 0.2rem solid #58807cbd;
+}
+
+.espacio {
+    padding-top: 1rem;
+}
+
+a:after {
+    content: "";
+    position: absolute;
+    background-color: #45a56b;
+    height: 0.2rem;
+    width: 0;
+    left: 0;
+    bottom: -0.25rem;
+    transition: 0.4s;
+}
+
+.email .facebook .insta .what{
+    transition: color 0.4s, transform 0.4s;
+}
+
+.email:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 0.60rem #666666;
+}
+
+.facebook:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 0.60rem #2023dc;
+}
+
+.insta:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 0.60rem #ff6b6b;
+}
+
+.what:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 0.60rem #90e0ef;
+}
+
+a:hover {
+    color: #fff;
+}
+
+a:hover::after {
+    width: 100%;
+}
+
+details a.despliegue:hover {
+    background-color: #2f7f50;
+}
+
+
+@keyframes slider {
+    0%{
+        background-image:url(imagen/amanecer.jpg) ;
+    }
+    30%{
+        background-image:url(imagen/arbol.jpg);
+    }
+    60%{
+        background-image:url(imagen/anochecer.jpg) ;
+    }
+    100%{
+        background-image:url(imagen/estrellado.jpg) ;
+    }
+}
+
+@media(max-width: 600px) {
+    .div{
+        width: 90%;
+        height: auto;
+    }
+}
