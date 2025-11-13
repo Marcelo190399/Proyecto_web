@@ -14,6 +14,7 @@ body {
     display: flex;
     width: 100%;
     min-height: 100vh;
+    flex-wrap: wrap;
 }
 
 .lateral-izquierdo {
@@ -28,6 +29,10 @@ body {
     padding: 1rem;
 }
 
+.menu {
+    width: 100%;
+}
+
 .indice {
     padding: 0.6rem 0;
     margin: 0.6rem;
@@ -35,7 +40,12 @@ body {
     background-color: black;
     border-radius: 1.8rem;
     position: relative;
-
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    width: 90%;
 }
 
 nav .barra {
@@ -85,7 +95,7 @@ details[open] a.despliegue {
     margin: 5px;
     border-radius: 5px;
     white-space: nowrap;
-    box-shadow: o 2px 6px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
     z-index: 10;
 }
 
@@ -97,6 +107,29 @@ a {
     font-size: 1.1rem;
     letter-spacing: 0.5px;
     padding: 0 0.6rem;
+}
+
+a::after {
+    content: "";
+    position: absolute;
+    background-color: #45a56b;
+    height: 0.2rem;
+    width: 0;
+    left: 0;
+    bottom: -0.25rem;
+    transition: 0.4s;
+}
+
+a:hover {
+    color: #fff;
+}
+
+a:hover::after {
+    width: 100%;
+}
+
+details a.despliegue:hover {
+    background-color: #2f7f50;
 }
 
 section {
@@ -188,11 +221,14 @@ h2 {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    min-height: 60vh;
+    position: relative;
 }
 
 .div {
-    width: 24rem;
-    height: 28rem;
+    width: 60%;
+    height: 60vh;
     opacity: 1;
     box-shadow:0 3.5rem 3.5rem -3.5rem rgba(215, 12, 63, 0.682);
     animation: slider 20s linear infinite;
@@ -200,6 +236,7 @@ h2 {
     background-repeat: no-repeat;
     background-size: cover;
     padding-bottom: 3rem;
+    border-radius: 1.5rem;
 }
 
 footer {
@@ -213,17 +250,6 @@ footer {
 .espacio {
     padding-top: 1rem;
     padding-bottom: 2rem;
-}
-
-a:after {
-    content: "";
-    position: absolute;
-    background-color: #45a56b;
-    height: 0.2rem;
-    width: 0;
-    left: 0;
-    bottom: -0.25rem;
-    transition: 0.4s;
 }
 
 .email .facebook .insta .what{
@@ -250,19 +276,6 @@ a:after {
     box-shadow: 0 0 0.60rem #90e0ef;
 }
 
-a:hover {
-    color: #fff;
-}
-
-a:hover::after {
-    width: 100%;
-}
-
-details a.despliegue:hover {
-    background-color: #2f7f50;
-}
-
-
 @keyframes slider {
     0%{
         background-image:url(imagen/amanecer.jpg) ;
@@ -278,9 +291,80 @@ details a.despliegue:hover {
     }
 }
 
-@media(max-width: 600px) {
+@media(max-width: 800px) {
     .div{
-        width: 90%;
+        width: 85%;
         height: auto;
+        min-height: 50vh;
+        justify-content: center;
+    }
+
+    .imagen-transicion {
+        width: 100%;
+        min-height: 50vh;
+    }
+
+    a::after {
+    background-color: #ff6b6b;
+    }
+
+    a:hover {
+        color: #ff6b6b;
+    }
+
+    details a.despliegue:hover {
+    background-color: #ff6b6b;
+    }
+
+    .lateral {
+        flex-direction: column;
+    }
+
+    .menu {
+        width: 95%;
+    }
+
+    .indice {
+        flex-direction: column;
+        padding: 1rem;
+        text-align: center;
+        width: 95%;
+    }
+
+    nav .barra {
+        flex-direction: column;
+        width: 100%;
+        gap: 0.6rem;
+    }
+
+    .menu .indice {
+        background-color: #162e16b9;
+        border-radius: 1rem;
+    }
+
+    .imagen-efecto img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .lateral-derecho {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .imagen-efecto {
+        width: 85%;
+        justify-content: center;
+    }
+
+    .lateral-izquierdo {
+        width: 100%;
+        padding: 0.5rem;
+        text-align: center;
+    }
+
+    .espacio {
+        width: 100%;
+        text-align: center;
     }
 }

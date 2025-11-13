@@ -19,31 +19,31 @@ if (!isset($_SESSION['usuario_id'])) {
         <aside class="lateral-izquierdo">
         </aside>
         <div class="lateral-derecho">
-    <header>
-        <div class="indice">
-            <nav>
-                <ul class="barra">
-                    <li><a href="protegida.php">Principal</a></li>
-                    <li><a href="imagenes.html">Imágenes</a></li>
-                    <li><a href="#">Códigos</a></li>
-                    <details>
-                        <summary><img src="imagen/perfil.jpg" alt="foto" width="50px" height="50px"></summary>
-                            <a href="logout.php" class="despliegue">Cerrar sesión</a>
-                    </details>
-                </ul>
-            </nav>
+        <header class="menu">
+            <div class="indice">
+                <nav>
+                    <ul class="barra">
+                        <li><a href="protegida.php">Principal</a></li>
+                        <li><a href="imagenes.html">Imágenes</a></li>
+                        <li><a href="#">Códigos</a></li>
+                        <details>
+                           <summary><img src="imagen/perfil.jpg" alt="foto" width="50px" height="50px"></summary>
+                               <a href="logout.php" class="despliegue">Cerrar sesión</a>
+                        </details>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+            <div class="imagen-efecto">
+                <article>
+                    <img src="imagen/poster.jpg" alt="poster">
+                    <img src="imagen/denji.png" alt="denji">
+                </article>
+            </div>
+            <section class="contenido">
+                <h2>Póster promocional de la película de chainsaw man</h2>
+            </section>
         </div>
-    </header>
-    <div class="imagen-efecto">
-    <article>
-        <img src="imagen/poster.jpg" alt="poster">
-        <img src="imagen/denji.png" alt="denji">
-    </article>
-    </div>
-     <section class="contenido">
-            <h2>Poster promocional de la película de chainsaw man</h2>
-    </section>
-    </div>
     </div>
     <footer>
         <aside class="espacio">
