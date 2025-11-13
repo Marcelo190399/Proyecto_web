@@ -22,7 +22,7 @@ body {
     padding: 2.5rem;
     background: #ffffffe6;
     border-radius: 0.7rem;
-    box-shadow: 0 0.6rem 2rem #d0d0d0;
+    box-shadow: 0 0.6rem 1rem #4ca94cba;
     animation: fadeIn 1.5s ease-out;
 }
 
