@@ -66,8 +66,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     <form class="login" action="registro.php" method="post">
         <div class="inicio">Registro</div>
         <?php if (!empty($mensaje)) : ?>
-                <div class="mensaje <?= strpos($mensaje) !== false ? 'success' : '' ?>">
-                    <?= htmlspecialchars($mensaje) ?>
+                <div class="mensaje <?= strpos($mensaje, 'incorrecta') !== false || strpos($mensaje, 'registrado') !== false ? 'error' : 'success' ?>">
+        <?= htmlspecialchars($mensaje) ?>
                 </div>
             <?php endif; ?>
         <div class="input-group">
