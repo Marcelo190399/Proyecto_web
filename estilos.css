@@ -6,7 +6,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #161616;
+    background-color: #0d0d0d;
 
 }
 
@@ -17,12 +17,12 @@ body {
 }
 
 .login {
-    max-width: 320px;
+    max-width: 20rem;
     width: 100%;
-    padding: 40px;
+    padding: 2.5rem;
     background: #ffffffe6;
-    border-radius: 12px;
-    box-shadow: 0 10px 30px #0000001a;
+    border-radius: 0.7rem;
+    box-shadow: 0 0.6rem 2rem #d0d0d0;
     animation: fadeIn 1.5s ease-out;
 }
 
@@ -31,29 +31,30 @@ body {
     color: #333;
     font-size: 2rem;
     font-weight: 600;
-    margin-bottom: 25px;
+    margin-bottom: 1.5rem;
     letter-spacing: 1px;
     text-transform: uppercase;
 }
 
 .mensaje {
-    background-color: #f5f5f5;
+    background-color: #e0466d63;
     text-align: center;
     color: #e32323;
-    font-size: 20px;
+    font-size: 1rem;
     font-weight: 600;
-    margin-bottom: 25px;
+    margin-bottom: 1.5rem;
     letter-spacing: 1px;
 }
 
 .verificacion {
-    position: absolute;
     color: #161616;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
 }
 
 .input-group {
     position: relative;
-    margin-bottom: 20px;
+    margin-bottom: 1rem;
 }
 
 .input-group .label {
@@ -68,8 +69,8 @@ body {
 }
 
 .input-group input {
-    width: 275px;
-    padding: 15px 20px;
+    width: 17rem;
+    padding: 1rem 1.5rem;
     font-size: 1rem;
     color: #333;
     background-color: #f5f5f5;
@@ -108,29 +109,45 @@ body {
 }
 
 .submit {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 1rem;
     width: 100%;
-    padding: 15px;
-    background-color: #58bc82;
-    color: #fff;
-    border: none;
+    padding: 1rem 2.5rem;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #0d0d0d;
+    border: 2px solid #41c698;
+    background: transparent;
     border-radius: 30px;
-    font-size: 1.1rem;
-    font-weight: 600;
+    overflow: hidden;
+    text-transform: uppercase;
     cursor: pointer;
-    transition: all 0.3s ease;
+}
+
+.submit::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: #41c698;
+    transform: translateX(-50%) scale(0);
+    transform-origin: center bottom;
+    transition: trasform 1s ease, width 1s ease, height 1s ease;
+    z-index: -1;
+}
+
+.submit:hover::before {
+    width: 300%;
+    height: 180%;
+    transform: translateX(-50%) scale(1);
 }
 
 .submit:hover {
-    background-color: #45a56b;
-    transform: translateY(-2px);
-    box-shadow: 0 5px 20px #58bc824d;
-}
-
-.signun-link {
-    margin-top: 10px;
-    text-align: center;
-    font-size: 14px;
-    color: #333;
+    color: #000;
 }
 
 .signun-link a {
