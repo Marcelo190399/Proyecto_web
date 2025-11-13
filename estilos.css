@@ -37,6 +37,7 @@ body {
 }
 
 .mensaje {
+    width: 100%;
     background-color: #e0466d63;
     text-align: center;
     color: #e32323;
@@ -174,5 +175,12 @@ body {
     100% {
         opacity: 1;
         transform: scale(1);
+    }
+}
+
+@media(max-width: 900px) {
+    .login {
+        width: 90%;
+        padding: 1rem;
     }
 }
