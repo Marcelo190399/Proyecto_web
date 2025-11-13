@@ -15,6 +15,10 @@ if (!isset($_SESSION['usuario_id'])) {
     <link rel="stylesheet"  href="inicio.css">
 </head>
 <body>
+    <div class="lateral">
+        <aside class="lateral-izquierdo">
+        </aside>
+        <div class="lateral-derecho">
     <header>
         <div class="indice">
             <nav>
@@ -30,11 +34,17 @@ if (!isset($_SESSION['usuario_id'])) {
             </nav>
         </div>
     </header>
-    <section class="contenido">
-            <h2>Bienvenid@, <?php echo $_SESSION['usuario_nombre']; ?></h2>
-            <h2>Hola este es un espacio de prueba, por el momento no hay nada mas, pero si deseas haz click en la foto del perfil para cerrar sesión.</h2>
+    <div class="imagen-efecto">
+    <article>
+        <img src="imagen/poster.jpg" alt="poster">
+        <img src="imagen/denji.png" alt="denji">
+    </article>
+    </div>
+     <section class="contenido">
+            <h2>Poster promocional de la película de chainsaw man</h2>
     </section>
-    
+    </div>
+    </div>
     <footer>
         <aside class="espacio">
             <h3>Contáctame</h3>

@@ -66,7 +66,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     <form class="login" action="registro.php" method="post">
         <div class="inicio">Registro</div>
         <?php if (!empty($mensaje)) : ?>
-                <div class="mensaje <?= strpos($mensaje, '✅') !== false ? 'success' : '' ?>">
+                <div class="mensaje <?= strpos($mensaje) !== false ? 'success' : '' ?>">
                     <?= htmlspecialchars($mensaje) ?>
                 </div>
             <?php endif; ?>

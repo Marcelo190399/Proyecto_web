@@ -76,7 +76,7 @@ $conn->close();
     <form class="login" action="login.php" method="post">
         <div class="inicio">Login</div>
         <?php if (!empty($mensaje)) : ?>
-                <div class="mensaje <?= strpos($mensaje, '✅') !== false ? 'success' : '' ?>">
+                <div class="mensaje <?= strpos($mensaje) !== false ? 'success' : '' ?>">
                     <?= htmlspecialchars($mensaje) ?>
                 </div>
             <?php endif; ?>
